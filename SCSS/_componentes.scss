@@ -1,0 +1,39 @@
+@use '_variaveis' as *;
+
+/* Serviços */
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.services__item {
+  background: #f5f5f5;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Formulário de Contato */
+.contact__form {
+  display: flex;
+  flex-direction: column;
+
+  & > * {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .contact__button {
+    background: $cor-primaria;
+    color: $cor-branca;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background: $cor-secundaria;
+    }
+  }
+}

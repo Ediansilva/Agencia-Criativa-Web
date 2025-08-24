@@ -1,0 +1,15 @@
+// Centralizar flex
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Responsividade
+@mixin respond($break) {
+  @if $break == md {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}

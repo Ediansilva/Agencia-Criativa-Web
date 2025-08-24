@@ -1,0 +1,61 @@
+@use "mixins" as *;
+@use "variaveis" as *;
+
+/* Header */
+.header {
+  @include flex-center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: $cor-primaria;
+  color: $cor-branca;
+
+  &__logo { font-size: 1.5rem; font-weight: bold; }
+  &__menu { list-style: none; display: flex; }
+  &__item { margin-left: 1.5rem; }
+  &__link { color: $cor-branca; text-decoration: none; }
+  &__toggle { display: none; font-size: 1.5rem; cursor: pointer; }
+
+  @include respond(md) {
+    &__menu {
+      flex-direction: column;
+      display: none;
+      background: $cor-primaria;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 200px;
+    }
+    &__menu--active { display: flex; }
+    &__toggle { display: block; }
+  }
+}
+
+/* Banner */
+.banner {
+  background: url('https://picsum.photos/1920/600') no-repeat center center/cover;
+  height: 70vh;
+  @include flex-center;
+  flex-direction: column;
+  text-align: center;
+  color: $cor-branca;
+
+  &__title { font-size: 2.5rem; }
+}
+
+/* Seções */
+.about,
+.services,
+.testimonials,
+.contact {
+  padding: $padding-section;
+  max-width: $largura-max;
+  margin: auto;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: $cor-primaria;
+  color: $cor-branca;
+}
